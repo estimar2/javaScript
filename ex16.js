@@ -1,4 +1,4 @@
-//프로토타입을 이요한 클래스
+// 프로토타입을 이용한 클래스
 
 function Pro(name, age) {
   this.name = name;
