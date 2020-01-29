@@ -11,8 +11,8 @@ function Pro(name, price) {
   };
 }
 
-let p1 = new Pro("Peng", 3000);
-let p2 = new Pro("Soo", 5000);
+let p1 = new Pro("GOLD", 3000);
+let p2 = new Pro("SILVER", 5000);
 let p3 = new Pro();
 
 p3.name = "HOHOHO";

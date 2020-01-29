@@ -7,7 +7,7 @@ console.log("num1의 요소의 수 : " + num1.length);
 var mixArr = ["n", 26, "s", "31", new Date(), "songsongsong"];
 
 var objArr = [
-  { id: 20200128, name: "SONGSEONGMIN", dept: "developer" },
+  { id: 20200128, name: "SONGSONGSONG", dept: "developer" },
   { id: 20200129, name: "POM_POM", dept: "designer" },
   { id: 20200130, name: "CAT", dept: "frontend" }
 ];

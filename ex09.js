@@ -14,11 +14,11 @@ const u5 = { name: "5555" };
 
 const uRole = new Map();
 
-uRole.set(u1, "song");
-uRole.set(u2, "seong");
-uRole.set(u3, "min");
-uRole.set(u4, "in");
-uRole.set(u5, "iphone"); // 중복된 키에도 데이터 저장
+uRole.set(u1, "DIAMOND");
+uRole.set(u2, "PLATINUM");
+uRole.set(u3, "GOLD");
+uRole.set(u4, "SILVER");
+uRole.set(u5, "BRONZE"); // 중복된 키에도 데이터 저장
 
 console.log(uRole.has(u2));
 console.log(uRole.has("yang"));

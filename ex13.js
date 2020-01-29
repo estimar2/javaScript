@@ -5,9 +5,9 @@ for (var key in obj1) {
 }
 
 let obj2 = [
-  { name: "song", age: 26 },
-  { name: "seong", age: 31 },
-  { name: "jae", age: 17 }
+  { name: "GOLD", age: 26 },
+  { name: "SILVER", age: 31 },
+  { name: "BRONZE", age: 17 }
 ];
 for (var i = 0; i < 3; i++) {
   for (var key in obj2[i]) {
