@@ -1,4 +1,3 @@
-/** @format */
 const colors = ["blue", "blak", "skyblue"];
 
 console.log("원래 배열 값 : " + colors);

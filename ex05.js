@@ -1,5 +1,3 @@
-/** @format */
-
 console.log("for문1");
 
 const colors = ["black", "skyblue", "tomato"];

@@ -1,5 +1,3 @@
-/** @format */
-
 //console.log("data1:" + txt);
 
 if (true) {

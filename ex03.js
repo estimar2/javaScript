@@ -1,5 +1,3 @@
-/** @format */
-
 let level = "A";
 
 switch (level) {
