@@ -1,0 +1,71 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My javsScript</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div
+      class="contaienr w-75 mt-5 p-5 shadow text-center bg-warning text-dark"
+    >
+      <h2>Current Weather in Daejeon, Korea</h2>
+      <div class="row bg-sucess p-5 rounded-circle">
+        <div class="col-5">
+          <img src="" alt="" id="icon" />
+        </div>
+        <div class="col-7 m-auto">
+          <h1 class="display-3" id="temp"></h1>
+          <strong id="weather"></strong> <br />
+          Min: <span id="min"></span> ℃ <br />
+          MAX : <span id="max"></span>℃ <br />
+          Wind : <span id="wind"></span>m/s
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let temp = document.querySelector("#temp"); //평균기온
+      let min = document.querySelector("#min"); // 최저기온
+      let max = document.querySelector("#max"); // $("#max")최고기온
+      let wind = document.querySelector("#wind"); // 바람
+      let weather = document.querySelector("#weather"); // 날씨
+      let icon = document.querySelector("#icon"); // 날씨 아이콘
+      let icon_url =
+        "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets";
+      let api_url =
+        "https://api.openweathermap.org/data/2.5/find?q=Daejeon&units=metric$appid=7d96bc5108f52b802d9075a369b9f35"; // get 방식
+
+      axios
+        .get(api_url)
+        .then(function(response) {
+          // 3차원 배열로 존재
+          console.log(response.data);
+          let wdata = response.data.list[0];
+          let exdata = response.data.list[0].weather[0];
+
+          temp.innerText = wdata.main.temp + "℃";
+          min.innerText = wdata.main.temp_min;
+          max.innerText = wdata.main.temp_max;
+          wind.innerText = wdata.wind.speed;
+          weather.innerText = exdata.main + " , " + exdata.description;
+          icon.setAttribute("src", icon_url + exdata.icon + ".png");
+        })
+        .catch(function(error) {
+          console.log(error);
+        })
+        .then(function() {});
+    </script>
+  </body>
+</html>
